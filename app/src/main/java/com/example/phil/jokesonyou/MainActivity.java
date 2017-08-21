@@ -1,7 +1,6 @@
 package com.example.phil.jokesonyou;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -10,6 +9,7 @@ import android.view.View;
 
 import com.example.MyJokes;
 import com.example.myandroidlibrary.JokeActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,12 +50,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(newJoke);
     }
 
-    private class EndpointsAsyncTask extends AsyncTask<String, Void, String> {
-        private MyApi myApiService = null;
-
-        @Override
-        protected String doInBackground(String... strings) {
-            return null;
-        }
-    }
 }
