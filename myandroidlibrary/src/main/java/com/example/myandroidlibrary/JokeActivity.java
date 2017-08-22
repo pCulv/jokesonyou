@@ -21,9 +21,8 @@ public class JokeActivity extends AppCompatActivity {
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
-
         String joke = getIntent().getStringExtra(INTENT_EXTRA_JOKE);
-        TextView jokeTextView = (TextView) findViewById(R.id.jokeText);
+        TextView jokeTextView = findViewById(R.id.jokeText);
         if (jokeTextView != null) {
             jokeTextView.setText(joke);
         }
