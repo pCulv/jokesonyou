@@ -11,9 +11,7 @@ import java.util.concurrent.TimeUnit;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
 
-/**
- * Created by phil on 8/23/17.
- */
+
 @RunWith(AndroidJUnit4.class)
 public class AsyncTaskTest {
     @Test
