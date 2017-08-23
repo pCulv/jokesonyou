@@ -1,14 +1,10 @@
 package com.example.phil.jokesonyou;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
-import com.example.MyJokes;
-import com.example.myandroidlibrary.JokeActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -43,11 +39,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        String jokeExtra = MyJokes.getJoke();
 
-        Intent newJoke = new Intent(this, JokeActivity.class);
-        newJoke.putExtra("joke", jokeExtra);
-        startActivity(newJoke);
+
+        new EndpointAsyncTask(this).execute();
     }
 
 }

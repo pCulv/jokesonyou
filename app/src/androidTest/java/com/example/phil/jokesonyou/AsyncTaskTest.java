@@ -1,24 +1,28 @@
 package com.example.phil.jokesonyou;
 
-
+import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.concurrent.TimeUnit;
 
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
 
-//@RunWith(AndroidJUnit4.class)
-public class EndpointAsyncTaskTest {
+/**
+ * Created by phil on 8/23/17.
+ */
+@RunWith(AndroidJUnit4.class)
+public class AsyncTaskTest {
     @Test
     public void testDoInBackground() throws Exception{
         try {
             MainActivity mainActivity = new MainActivity();
-            EndpointAsyncTask endpointsAsyncTask = new EndpointAsyncTask();
-            endpointsAsyncTask.execute();
-            String result = endpointsAsyncTask.get(30, TimeUnit.SECONDS);
+            EndpointAsyncTask endpointAsyncTask = new EndpointAsyncTask(mainActivity);
+            endpointAsyncTask.execute();
+            String result = endpointAsyncTask.get(30, TimeUnit.SECONDS);
 
             assertNotNull(result);
             assertTrue(result.length() > 0);
