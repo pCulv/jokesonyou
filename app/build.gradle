@@ -23,7 +23,7 @@ android {
             applicationId "com.example.phil.jokesonyou.free"
         }
         paid {
-            applicationId "com.example.phil.jokesonyou"
+            applicationId "com.example.phil.jokesonyou.paid"
         }
     }
 }
