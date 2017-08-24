@@ -29,7 +29,7 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
             MyApi.Builder builder = new MyApi
                     .Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
-                    .setRootUrl("http://10.0.2.2:8080/_ah/api/");
+                    .setRootUrl("http://192.168.29.1:8080/_ah/api/");
 
             myApiService = builder.build();
         }
@@ -44,14 +44,18 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        launchJokeActivity();
+        if (result != null) {
+            Intent newJoke = new Intent(mContext, JokeActivity.class);
+            newJoke.putExtra("joke", result);
+            mContext.startActivity(newJoke);
+        }
     }
 
     private void launchJokeActivity() {
         String jokeExtra = MyJokes.getJoke();
 
-        Intent newJoke = new Intent(mContext, JokeActivity.class);
-        newJoke.putExtra("joke", jokeExtra);
-        mContext.startActivity(newJoke);
+//        Intent newJoke = new Intent(mContext, JokeActivity.class);
+//        newJoke.putExtra("joke", );
+//        mContext.startActivity(newJoke);
     }
 }
