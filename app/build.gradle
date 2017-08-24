@@ -19,11 +19,9 @@ android {
     }
 
     productFlavors {
-        free {
-            applicationId "com.example.phil.jokesonyou.free"
-        }
+        free {}
         paid {
-            applicationId "com.example.phil.jokesonyou.paid"
+            applicationIdSuffix ".paid"
         }
     }
 }
