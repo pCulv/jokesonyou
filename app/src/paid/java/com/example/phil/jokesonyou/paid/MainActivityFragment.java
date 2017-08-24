@@ -7,11 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.phil.jokesonyou.MainActivityFragmentMain;
+import com.example.phil.jokesonyou.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainActivityFragment extends Fragment {
+public class MainActivityFragment extends MainActivityFragmentMain {
 
 
     public MainActivityFragment() {
@@ -22,9 +25,7 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return super.onCreateView(inflater, container, savedInstanceState);
-
     }
 
 
