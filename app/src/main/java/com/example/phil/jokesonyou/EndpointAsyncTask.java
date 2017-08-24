@@ -50,5 +50,4 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
             mContext.startActivity(newJoke);
         }
     }
-
 }
